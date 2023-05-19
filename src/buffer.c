@@ -29,6 +29,9 @@
 #include <windows.h>
 #include "buffer.h"
 
+#pragma comment(lib,"ntdllp.lib")
+
+
 // Size of each memory block. (= page size of VirtualAlloc)
 #define MEMORY_BLOCK_SIZE 0x1000
 
@@ -257,7 +260,7 @@ LPVOID AllocateBuffer(LPVOID pOrigin)
     pBlock->usedCount++;
 #ifdef _DEBUG
     // Fill the slot with INT3 for debugging.
-    memset(pSlot, 0xCC, sizeof(MEMORY_SLOT));
+    _memset(pSlot, 0xCC, sizeof(MEMORY_SLOT));
 #endif
     return pSlot;
 }
@@ -276,7 +279,7 @@ VOID FreeBuffer(LPVOID pBuffer)
             PMEMORY_SLOT pSlot = (PMEMORY_SLOT)pBuffer;
 #ifdef _DEBUG
             // Clear the released slot for debugging.
-            memset(pSlot, 0x00, sizeof(MEMORY_SLOT));
+            _memset(pSlot, 0x00, sizeof(MEMORY_SLOT));
 #endif
             // Restore the released slot to the list.
             pSlot->pNext = pBlock->pFree;

@@ -99,6 +99,8 @@
       <SubSystem>Windows</SubSystem>
       <TargetMachine>MachineX86</TargetMachine>
       <AdditionalDependencies>$(SolutionDir)lib\$(Configuration)\libMinHook.x86.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <NoEntryPoint>true</NoEntryPoint>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -122,6 +124,9 @@
       <SubSystem>Windows</SubSystem>
       <TargetMachine>MachineX64</TargetMachine>
       <AdditionalDependencies>$(SolutionDir)lib\$(Configuration)\libMinHook.x64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <NoEntryPoint>true</NoEntryPoint>
+      <AdditionalOptions>/Oi %(AdditionalOptions)</AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -147,6 +152,7 @@
       <AdditionalDependencies>$(SolutionDir)lib\$(Configuration)\libMinHook.x86.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <NoEntryPoint>true</NoEntryPoint>
       <MergeSections>.CRT=.text</MergeSections>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -175,6 +181,7 @@
       <AdditionalDependencies>$(SolutionDir)lib\$(Configuration)\libMinHook.x64.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <NoEntryPoint>true</NoEntryPoint>
       <MergeSections>.CRT=.text</MergeSections>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
