@@ -1,0 +1,6 @@
+F:/github/minhook/out/build/x64-Debug/CMakeFiles/install/local.dir
+F:/github/minhook/out/build/x64-Debug/CMakeFiles/install.dir
+F:/github/minhook/out/build/x64-Debug/CMakeFiles/edit_cache.dir
+F:/github/minhook/out/build/x64-Debug/CMakeFiles/minhook.dir
+F:/github/minhook/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir
+F:/github/minhook/out/build/x64-Debug/CMakeFiles/list_install_components.dir
